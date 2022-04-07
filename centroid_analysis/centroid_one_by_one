@@ -1,1 +1,32 @@
+import slab
+import statistics
+
+#Calculate centorid for every file
+signal1 = slab.Sound("/Users/hannahsmacbook/Stimuli_J/dis_1/dis_1_J_1.wav")
+c_1 = signal1.spectral_feature(feature='centroid')
+
+signal2 = slab.Sound("/Users/hannahsmacbook/Stimuli_J/dis_1/dis_1_J_2.wav")
+c_2 = signal2.spectral_feature(feature='centroid')
+
+signal3 = slab.Sound("/Users/hannahsmacbook/Stimuli_J/dis_1/dis_1_J_3.wav")
+c_3 = signal3.spectral_feature(feature='centroid')
+
+signal4 = slab.Sound("/Users/hannahsmacbook/Stimuli_J/dis_1/dis_1_J_4.wav")
+c_4 = signal4.spectral_feature(feature='centroid')
+
+signal5 = slab.Sound("/Users/hannahsmacbook/Stimuli_J/dis_1/dis_1_J_5.wav")
+c_5 = signal5.spectral_feature(feature='centroid')
+
+signal6 = slab.Sound("/Users/hannahsmacbook/Stimuli_J/dis_1/dis_1_J_6.wav")
+c_6 = signal6.spectral_feature(feature='centroid')
+
+
+
+#Add centorid values together to one list
+res_list = c_1 + c_2 + c_3 + c_4 + c_5 + c_6
+#Print "big" list
+print(res_list)
+
+#Calculate and print average of list
+print(statistics.mean(res_list))
 
