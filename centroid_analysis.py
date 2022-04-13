@@ -30,7 +30,7 @@ for sound_file_path in sound_file_paths:
 #To see all values separately:
 print("Values for distance 1:")
 print(res_list_1)
-#To see which values matches which file:
+#To see which values match which file:
 print(sound_file_paths)
 '''
 
@@ -49,7 +49,7 @@ for sound_file_path in sound_file_paths:
 #To see all values separately:
 print("Values for distance 2:")
 print(res_list_2)
-#To see which values matches which file:
+#To see which values match which file:
 print(sound_file_paths)
 '''
 
@@ -69,7 +69,7 @@ for sound_file_path in sound_file_paths:
 #To see all values separately:
 print("Values for distance 3:")
 print(res_list_3)
-#To see which values matches which file:
+#To see which values match which file:
 print(sound_file_paths)
 '''
 
@@ -89,7 +89,7 @@ for sound_file_path in sound_file_paths:
 #To see all values separately:
 print("Values for distance 4:")
 print(res_list_4)
-#To see which values matches which file:
+#To see which values match which file:
 print(sound_file_paths)
 '''
 
@@ -109,7 +109,7 @@ for sound_file_path in sound_file_paths:
 #To see all values separately:
 print("Values for distance 5:")
 print(res_list_5)
-#To see which values matches which file:
+#To see which values match which file:
 print(sound_file_paths)
 '''
 
