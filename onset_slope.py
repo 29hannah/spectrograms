@@ -96,12 +96,12 @@ onset_5 = (statistics.mean(res_list_5))
 o_sd_5 = (statistics.stdev(res_list_5))
 
 
-#Final list with averaged values of onset_slope for every distance
+#List with averaged values of onset_slope for every distance
 print("Mean onset slope from category 1 to 5:")
 final_list_mean = [onset_1, onset_2, onset_3, onset_4, onset_5]
 print(final_list_mean)
 
-#Calculate standard deviation for each distance
+#List with standard deviation for each distance
 print("Standard deviation for category 1 to 5:")
 final_list_stdev = [o_sd_1, o_sd_2, o_sd_3, o_sd_4, o_sd_5]
 print(final_list_stdev)
