@@ -3,6 +3,7 @@ import statistics
 import os
 import pathlib
 from os.path import join
+import pandas as pd
 
 #Get files
 def abs_file_paths(directory):
@@ -11,7 +12,7 @@ def abs_file_paths(directory):
             if not f.startswith('.'):
                 yield pathlib.Path(join(dirpath, f))
 folder_path = pathlib.Path
-all_file_names = [f for f in abs_file_paths("/Users/hannahsmacbook/Pilot_stimuli_2")]
+all_file_names = [f for f in abs_file_paths("/Users/hannahsmacbook/Original files_pilot2/pilot_2_J")]
 
 
 names_of_files = ['%{0}%'.format(filenames) for filenames in all_file_names]
@@ -34,6 +35,11 @@ for file_name in all_file_names:
 
 features_object = dict(zip(sound_id, zip (projected_distance,centroid_list, onset_slope_list, rolloff_list)))
 
-with open('Pilot_stimuli_analysis.csv', 'w') as f:
+with open('Pilot_stimuli_analysis_J.csv', 'w') as f:
     for key in features_object.keys():
         f.write("%s, %s\n" % (key, features_object[key]))
+
+#Add names to column names
+df = pd.read_csv('Pilot_stimuli_analysis_J.csv', header=None)
+df.rename(columns={0: 'sound_id', 1: 'projected_distance', 2:'centroid', 3: 'onset_slope', 4: 'rolloff'}, inplace=True)
+df.to_csv('Final_Pilot_stimuli_analysis_J.csv', index=False)
