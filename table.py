@@ -17,7 +17,8 @@ all_file_names = [f for f in abs_file_paths("/Users/hannahsmacbook/Original file
 
 names_of_files = ['%{0}%'.format(filenames) for filenames in all_file_names]
 sound_id=[elem[39:60] for elem in names_of_files]#edit the right numbers!
-projected_distance=[elem[50:54] for elem in names_of_files]#edit the right numbers!
+pre_projected_distance=[elem[85:86] for elem in names_of_files]#edit the right numbers!
+projected_distance=[int(elem) for elem in pre_projected_distance]
 
 centroid_list=[]
 onset_slope_list=[]
