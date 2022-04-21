@@ -11,12 +11,12 @@ def abs_file_paths(directory):
             if not f.startswith('.'):
                 yield pathlib.Path(join(dirpath, f))
 folder_path = pathlib.Path
-all_file_names = [f for f in abs_file_paths("/Users/hannahsmacbook/Stimuli/dis_1")]
+all_file_names = [f for f in abs_file_paths("/Users/hannahsmacbook/Pilot_stimuli_2")]
 
 
 names_of_files = ['%{0}%'.format(filenames) for filenames in all_file_names]
-sound_id=[elem[37:46] for elem in names_of_files]#edit the right numbers!
-projected_distance=[elem[31:36] for elem in names_of_files]#edit the right numbers!
+sound_id=[elem[39:60] for elem in names_of_files]#edit the right numbers!
+projected_distance=[elem[50:54] for elem in names_of_files]#edit the right numbers!
 
 centroid_list=[]
 onset_slope_list=[]
