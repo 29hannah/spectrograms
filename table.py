@@ -39,7 +39,7 @@ with open('Pilot_stimuli_analysis_J.csv', 'w') as f:
     for key in features_object.keys():
         f.write("%s, %s\n" % (key, features_object[key]))
 
-#Add names to column names
+#Add column names
 df = pd.read_csv('Pilot_stimuli_analysis_J.csv', header=None)
 df.rename(columns={0: 'sound_id', 1: 'projected_distance', 2:'centroid', 3: 'onset_slope', 4: 'rolloff'}, inplace=True)
 df.to_csv('Final_Pilot_stimuli_analysis_J.csv', index=False)
