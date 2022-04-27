@@ -29,8 +29,7 @@ seq = slab.Trialsequence(conditions=[1, 2, 3, 4, 5], n_reps=10)
 for condition in seq:
     file_name_group = sound_file_names[condition - 1]
     file_name = random.choice(file_name_group)
-    stimulus = slab.Sound(file_name)
-    stimulus.play()
+    slab.Sound.play_file(file_name)
     with slab.key() as key:  # wait for a key press
         response = key.getch()
     response_obj = {
